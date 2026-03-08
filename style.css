@@ -406,6 +406,17 @@ footer {
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
+/* hover para los de abajo (mantiene el shift horizontal) */
+.pricing-grid .pricing-card:nth-child(4):hover,
+.services-grid .service-card:nth-child(4):hover {
+  transform: translateX(50%) translateY(-5px);
+}
+
+.pricing-grid .pricing-card:nth-child(5):hover,
+.services-grid .service-card:nth-child(5):hover {
+  transform: translateX(-50%) translateY(-5px);
+}
+
 /* ==========================
    ELIMINAR ESPACIO EXTRA ANTES DEL FOOTER
 ========================== */
