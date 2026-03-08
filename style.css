@@ -486,3 +486,23 @@ html, body {
   }
 
 }
+
+/* ==========================
+   MOBILE FIX FOR CARDS
+========================== */
+
+@media (max-width: 768px) {
+
+  .pricing-grid,
+  .services-grid,
+  .contact-options {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-grid .pricing-card,
+  .services-grid .service-card {
+    transform: none !important;
+    width: 100%;
+  }
+
+}
