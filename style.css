@@ -494,6 +494,7 @@ html, body {
 
 }
 
+
 /* ==========================
    MOBILE BURGER MENU
 ========================== */
@@ -514,7 +515,7 @@ html, body {
   }
 
   .nav-links {
-    display: none;
+    display: none; /* OCULTA el nav inicialmente */
     flex-direction: column;
     position: absolute;
     top: 70px;
@@ -523,10 +524,11 @@ html, body {
     padding: 20px;
     border-radius: 10px;
     gap: 15px;
+    z-index: 9999; /* para que esté sobre todo */
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex; /* cuando se active el burger */
   }
 
 }
