@@ -197,18 +197,14 @@ h2::after {
 }
 
 /* ==========================
-   GRIDS
-========================== */
-/* ==========================
-   GRID PIRÁMIDE FINAL
+   GRID PRICING Y SERVICES (pirámide 3+2)
 ========================== */
 .pricing-grid,
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
-  gap: 2rem 2rem; /* fila y columna */
-  grid-auto-rows: minmax(150px, auto); /* asegura que cada fila se ajuste a la altura del contenido */
+  gap: 2rem 2rem; /* espacio entre filas y columnas */
   max-width: 1000px;
   margin: 0 auto;
   justify-items: center;
@@ -252,7 +248,7 @@ h2::after {
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media screen and (max-width: 1024px) {
   .pricing-grid,
   .services-grid {
@@ -283,6 +279,38 @@ h2::after {
     justify-self: stretch;
   }
 }
+
+/* ==========================
+   GRID CONTACT (3 cards en fila)
+========================== */
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 por fila */
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+@media screen and (max-width: 768px) {
+  .contact-options {
+    grid-template-columns: 1fr; /* 1 por fila en móvil */
+  }
+}
+
+ 
 /* ==========================
    LISTS
 ========================== */
