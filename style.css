@@ -431,3 +431,24 @@ footer {
 html, body {
   overflow-x: hidden;
 }
+
+/* ==========================
+   MOBILE LAYOUT
+========================== */
+
+@media (max-width: 768px) {
+
+  .pricing-grid,
+  .services-grid,
+  .contact-options {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card,
+  .service-card,
+  .contact-card {
+    transform: none !important;
+    width: 100%;
+  }
+
+}
