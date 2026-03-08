@@ -420,3 +420,14 @@ footer {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
+
+/* ==========================
+   ELIMINAR ESPACIO EXTRA ANTES DEL FOOTER
+========================== */
+
+/* Aplica solo al último section de index y contact */
+.index-page section:last-of-type,
+.contact-page section:last-of-type {
+  margin-bottom: 0;  /* elimina margen inferior */
+  padding-bottom: 0; /* elimina padding inferior */
+}
