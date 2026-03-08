@@ -538,3 +538,15 @@ html, body {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  nav ul {
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+}
