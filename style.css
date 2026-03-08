@@ -532,3 +532,19 @@ html, body {
   }
 
 }
+
+@media (max-width: 768px) {
+  html, body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1; /* fuerza que el contenido ocupe todo el espacio disponible */
+  }
+
+  footer {
+    margin-top: auto; /* fuerza que siempre quede pegado abajo */
+  }
+}
