@@ -199,18 +199,32 @@ h2::after {
 /* ==========================
    GRIDS
 ========================== */
-/* GRID REVISADO PARA TODAS LAS SECCIONES TIPO GRID */
+/* GRID REVISADO PARA CARDS */
 .services-grid,
 .pricing-grid,
 .contact-options {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* mínimo 280px para uniformidad */
+  grid-template-columns: repeat(3, 1fr); /* 3 cards por fila */
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  justify-items: center; /* centra los elementos si sobra espacio */
 }
 
+@media screen and (max-width: 1024px) {
+  .services-grid,
+  .pricing-grid,
+  .contact-options {
+    grid-template-columns: repeat(2, 1fr); /* 2 por fila en tablet */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services-grid,
+  .pricing-grid,
+  .contact-options {
+    grid-template-columns: 1fr; /* 1 por fila en móvil */
+  }
+}
 /* ==========================
    LISTS
 ========================== */
