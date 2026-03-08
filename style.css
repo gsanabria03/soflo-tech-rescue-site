@@ -507,50 +507,6 @@ html, body {
 
 }
 
-.burger {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: white;
-}
-
-@media (max-width: 768px) {
-
-  .burger {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: #004a99;
-    padding: 20px;
-    border-radius: 8px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  nav ul {
-    display: none;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-}
-
 /* ==========================
    MOBILE CARD LAYOUT
 ========================== */
@@ -572,27 +528,23 @@ html, body {
 }
 
 /* ==========================
-   MOBILE NAVIGATION
+   MOBILE BURGER MENU
 ========================== */
 
-@media (max-width: 768px) {
-
-  nav ul {
-    display: none;
-  }
-
-  nav ul.active {
-    display: flex;
-    flex-direction: column;
-  }
-
+.burger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
-/* ==========================
-   MOBILE NAV FIX
-========================== */
-
 @media (max-width: 768px) {
+
+  .burger {
+    display: block;
+  }
 
   .nav-links {
     display: none;
@@ -600,31 +552,13 @@ html, body {
     position: absolute;
     top: 70px;
     right: 20px;
-    background: #004a99;
+    background: var(--primary-color);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
+    gap: 15px;
   }
 
   .nav-links.active {
-    display: flex;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  nav {
-    display: none;
-    flex-direction: column;
-    background: #004a99;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    padding: 20px;
-    border-radius: 8px;
-  }
-
-  nav.active {
     display: flex;
   }
 
