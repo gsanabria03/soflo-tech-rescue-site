@@ -587,3 +587,26 @@ html, body {
   }
 
 }
+
+/* ==========================
+   MOBILE NAV FIX
+========================== */
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #004a99;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+}
