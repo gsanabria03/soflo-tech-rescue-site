@@ -199,28 +199,56 @@ h2::after {
 /* ==========================
    GRIDS
 ========================== */
-/* =====================================
-   GRID UNIFICADO PARA SERVICES Y PRICING
-===================================== */
-.services-grid,
-.pricing-grid {
+/* ================================
+   GRID PARA PRICING Y SERVICES
+================================ */
+.pricing-grid,
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 por fila arriba */
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 2rem 2rem;
   max-width: 1000px;
   margin: 0 auto;
+  justify-items: center;
 }
 
-/* Segunda fila centrada (4ta y 5ta card) */
-.services-grid .service-card:nth-child(n+4),
-.pricing-grid .pricing-card:nth-child(n+4) {
-  grid-column: span 1;
-  justify-self: center; /* centra las cards sobrantes en la fila inferior */
+/* Posicionamiento tipo pirámide usando grid-area */
+.pricing-grid .pricing-card:nth-child(1),
+.services-grid .service-card:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
 }
 
-/* ESTILO DE LAS CARDS */
-.service-card,
-.pricing-card {
+.pricing-grid .pricing-card:nth-child(2),
+.services-grid .service-card:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.pricing-grid .pricing-card:nth-child(3),
+.services-grid .service-card:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.pricing-grid .pricing-card:nth-child(4),
+.services-grid .service-card:nth-child(4) {
+  grid-column: 1 / 3; /* ocupa columna 1-2 */
+  grid-row: 2;
+  justify-self: center;
+}
+
+.pricing-grid .pricing-card:nth-child(5),
+.services-grid .service-card:nth-child(5) {
+  grid-column: 2 / 4; /* ocupa columna 2-3 */
+  grid-row: 2;
+  justify-self: center;
+}
+
+/* ESTILO DE CARDS */
+.pricing-card,
+.service-card {
   background: white;
   padding: 2rem;
   border-radius: 12px;
@@ -228,32 +256,69 @@ h2::after {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card:hover,
-.pricing-card:hover {
+.pricing-card:hover,
+.service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 /* RESPONSIVE */
 @media screen and (max-width: 1024px) {
-  .services-grid,
-  .pricing-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 por fila en tablet */
+  .pricing-grid,
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
   }
-  .services-grid .service-card:nth-child(n+4),
-  .pricing-grid .pricing-card:nth-child(n+4) {
+
+  .pricing-grid .pricing-card:nth-child(4),
+  .pricing-grid .pricing-card:nth-child(5),
+  .services-grid .service-card:nth-child(4),
+  .services-grid .service-card:nth-child(5) {
+    grid-column: auto;
     justify-self: center;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .services-grid,
-  .pricing-grid {
-    grid-template-columns: 1fr; /* 1 por fila en móvil */
+  .pricing-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
-  .services-grid .service-card:nth-child(n+4),
-  .pricing-grid .pricing-card:nth-child(n+4) {
-    justify-self: stretch; /* ocupa todo el ancho en móvil */
+
+  .pricing-grid .pricing-card:nth-child(4),
+  .pricing-grid .pricing-card:nth-child(5),
+  .services-grid .service-card:nth-child(4),
+  .services-grid .service-card:nth-child(5) {
+    justify-self: stretch;
+  }
+}
+
+/* CONTACT: solo 3 cards en fila */
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+@media screen and (max-width: 768px) {
+  .contact-options {
+    grid-template-columns: 1fr;
   }
 }
 /* ==========================
