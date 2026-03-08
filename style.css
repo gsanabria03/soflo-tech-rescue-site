@@ -199,30 +199,61 @@ h2::after {
 /* ==========================
    GRIDS
 ========================== */
-/* GRID REVISADO PARA CARDS */
+/* =====================================
+   GRID UNIFICADO PARA SERVICES Y PRICING
+===================================== */
 .services-grid,
-.pricing-grid,
-.contact-options {
+.pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards por fila */
+  grid-template-columns: repeat(3, 1fr); /* 3 por fila arriba */
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
 }
 
+/* Segunda fila centrada (4ta y 5ta card) */
+.services-grid .service-card:nth-child(n+4),
+.pricing-grid .pricing-card:nth-child(n+4) {
+  grid-column: span 1;
+  justify-self: center; /* centra las cards sobrantes en la fila inferior */
+}
+
+/* ESTILO DE LAS CARDS */
+.service-card,
+.pricing-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover,
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
 @media screen and (max-width: 1024px) {
   .services-grid,
-  .pricing-grid,
-  .contact-options {
+  .pricing-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 por fila en tablet */
+  }
+  .services-grid .service-card:nth-child(n+4),
+  .pricing-grid .pricing-card:nth-child(n+4) {
+    justify-self: center;
   }
 }
 
 @media screen and (max-width: 768px) {
   .services-grid,
-  .pricing-grid,
-  .contact-options {
+  .pricing-grid {
     grid-template-columns: 1fr; /* 1 por fila en móvil */
+  }
+  .services-grid .service-card:nth-child(n+4),
+  .pricing-grid .pricing-card:nth-child(n+4) {
+    justify-self: stretch; /* ocupa todo el ancho en móvil */
   }
 }
 /* ==========================
