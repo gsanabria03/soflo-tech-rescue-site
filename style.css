@@ -454,39 +454,6 @@ html, body {
 }
 
 
-.burger {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* mobile nav */
-@media (max-width: 768px) {
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: #004a99;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    padding: 20px;
-    border-radius: 8px;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .burger {
-    display: block;
-  }
-
-}
-
 /* ==========================
    MOBILE FIX FOR CARDS
 ========================== */
