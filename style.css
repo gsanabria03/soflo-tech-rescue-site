@@ -550,3 +550,23 @@ html, body {
   }
 
 }
+
+/* ==========================
+   MOBILE CARD LAYOUT
+========================== */
+
+@media (max-width: 768px) {
+
+  .pricing-grid,
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pricing-grid .pricing-card,
+  .services-grid .service-card {
+    grid-column: 1 !important;
+    transform: none !important;
+    width: 100%;
+  }
+
+}
