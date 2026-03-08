@@ -427,3 +427,7 @@ footer {
   margin-bottom: 0;  /* elimina margen inferior */
   padding-bottom: 0; /* elimina padding inferior */
 }
+
+html, body {
+  overflow-x: hidden;
+}
