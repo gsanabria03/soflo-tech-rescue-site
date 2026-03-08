@@ -224,13 +224,13 @@ h2::after {
 .pricing-grid .pricing-card:nth-child(4),
 .services-grid .service-card:nth-child(4) {
   grid-column: 1;
-  justify-self: end;
+  justify-self: center;
 }
 
 .pricing-grid .pricing-card:nth-child(5),
 .services-grid .service-card:nth-child(5) {
   grid-column: 3;
-  justify-self: start;
+  justify-self: center;
 }
 
 /* Cards styling */
