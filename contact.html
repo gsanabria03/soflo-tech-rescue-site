@@ -49,11 +49,37 @@
   </div>
 </section>
 
-<!-- OPTIONAL FORM PLACEHOLDER -->
-<section class="contact-form fade-in">
-  <h2>Request a Diagnosis Form (Coming Soon)</h2>
-  <p>We'll integrate a form here to submit details directly to our email.</p>
+<!-- Reemplaza este bloque de 'Coming Soon' -->
+<section class="main-block fade-in">
+  <h1>Request a Diagnosis</h1>
+  <p>Fill out the form below and we'll get back to you quickly to schedule a computer check-up or repair.</p>
+
+  <form id="diagnosis-form" class="fade-in" style="max-width: 600px; margin: 0 auto;">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="John Doe" required style="width:100%; padding:12px; margin-bottom:15px; border-radius:6px; border:1px solid #ccc;">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="john@example.com" required style="width:100%; padding:12px; margin-bottom:15px; border-radius:6px; border:1px solid #ccc;">
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required style="width:100%; padding:12px; margin-bottom:15px; border-radius:6px; border:1px solid #ccc;">
+
+    <label for="computer-issue">Computer Issue / Notes</label>
+    <textarea id="computer-issue" name="computer-issue" placeholder="Describe the problem..." rows="5" style="width:100%; padding:12px; margin-bottom:15px; border-radius:6px; border:1px solid #ccc;"></textarea>
+
+    <button type="submit" class="btn primary">Submit Request</button>
+  </form>
 </section>
+
+<script>
+  // Manejo del formulario (solo front-end por ahora)
+  const form = document.getElementById('diagnosis-form');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert("Thanks! Your request has been received. We'll contact you soon.");
+    form.reset();
+  });
+</script>
 
 <!-- FOOTER -->
 <footer>
