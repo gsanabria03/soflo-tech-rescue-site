@@ -1,11 +1,10 @@
 console.log("JS loaded");
 
-// Selecciona todos los elementos con fade-in
+// Fade in animation
 const faders = document.querySelectorAll('.fade-in');
 
-// Función para verificar si el elemento está en viewport
 const appearOptions = {
-  threshold: 0.2, // 20% visible
+  threshold: 0.2,
   rootMargin: "0px 0px -50px 0px"
 };
 
@@ -13,18 +12,15 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     entry.target.classList.add('visible');
-    observer.unobserve(entry.target); // animar solo una vez
+    observer.unobserve(entry.target);
   });
 }, appearOptions);
 
-// Aplica el observer a cada fade-in
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-// ==========================
-// Smooth scroll for anchor links
-// ==========================
+// Smooth scroll
 const scrollLinks = document.querySelectorAll('a[href^="#"]');
 
 scrollLinks.forEach(link => {
@@ -37,9 +33,12 @@ scrollLinks.forEach(link => {
   });
 });
 
+// Burger menu
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav-links");
 
-burger.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
+if (burger && nav) {
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+}
