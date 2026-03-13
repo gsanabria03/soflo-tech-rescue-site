@@ -499,6 +499,7 @@ html, body {
    MOBILE BURGER MENU
 ========================== */
 
+/* BURGER base */
 .burger {
   display: none;
   font-size: 28px;
@@ -508,6 +509,13 @@ html, body {
   cursor: pointer;
 }
 
+/* NAV normal (desktop) */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
 
   .burger {
@@ -515,36 +523,20 @@ html, body {
   }
 
   .nav-links {
-    display: none; /* OCULTA el nav inicialmente */
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 70px;
-    right: 20px;
+    right: 0;
+    width: 100%;
     background: var(--primary-color);
-    padding: 20px;
-    border-radius: 10px;
-    gap: 15px;
-    z-index: 9999; /* para que esté sobre todo */
+    padding: 20px 0;
+    text-align: center;
+    z-index: 9999;
   }
 
   .nav-links.active {
-    display: flex; /* cuando se active el burger */
-  }
-
-}
-
-@media (max-width: 768px) {
-  html, body {
-    min-height: 100vh;
     display: flex;
-    flex-direction: column;
   }
 
-  main {
-    flex: 1; /* fuerza que el contenido ocupe todo el espacio disponible */
-  }
-
-  footer {
-    margin-top: auto; /* fuerza que siempre quede pegado abajo */
-  }
 }
