@@ -435,24 +435,31 @@ html, body {
 /* ==========================
    MOBILE LAYOUT
 ========================== */
-
 @media (max-width: 768px) {
 
-  .pricing-grid,
-  .services-grid,
-  .contact-options {
-    grid-template-columns: 1fr;
+  .burger{
+    display:block;
   }
 
-  .pricing-card,
-  .service-card,
-  .contact-card {
-    transform: none !important;
-    width: 100%;
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:100%;
+    right:0;
+    width:100%;
+    background:var(--primary-color);
+    padding:20px;
+    gap:15px;
+    border-radius:0 0 10px 10px;
+    z-index:9999;
+  }
+
+  .nav-links.active{
+    display:flex;
   }
 
 }
-
 
 /* ==========================
    MOBILE FIX FOR CARDS
