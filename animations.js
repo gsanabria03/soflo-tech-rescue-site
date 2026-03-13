@@ -1,3 +1,5 @@
+console.log("JS loaded");
+
 // Selecciona todos los elementos con fade-in
 const faders = document.querySelectorAll('.fade-in');
 
