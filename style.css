@@ -506,44 +506,39 @@ html, body {
    MOBILE BURGER MENU
 ========================== */
 
-/* BURGER base */
-.burger {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
+/* NAV normal (desktop) */
+.nav-links{
+  display:flex;
+  gap:20px;
 }
 
-/* NAV normal (desktop) */
-.nav-links {
-  display: flex;
-  gap: 20px;
+/* burger oculto en desktop */
+.burger{
+  display:none;
 }
+
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-  .burger {
-    display: block;
+  .burger{
+    display:block;
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    background: var(--primary-color);
-    padding: 20px 0;
-    text-align: center;
-    z-index: 9999;
+  .nav-links{
+    display:none !important;
+    flex-direction:column;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#004a99;
+    padding:20px;
   }
 
-  .nav-links.active {
-    display: flex;
+  .nav-links.active{
+    display:flex !important;
   }
 
+}
 }
