@@ -542,3 +542,19 @@ html, body {
 
 }
 }
+.burger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+.burger span{
+  width:25px;
+  height:3px;
+  background:white;
+  border-radius:2px;
+  display:block;
+}
