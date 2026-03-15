@@ -579,3 +579,29 @@ html, body {
 .logo img:hover{
   transform:scale(1.05);
 }
+
+/* ==========================
+   MOBILE BURGER MENU FIX
+========================== */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;       /* tamaño más visible */
+    height: 35px;      /* alto del contenedor */
+    background: none;  /* sin fondo */
+    border: none;      /* sin contorno */
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .burger span {
+    display: block;
+    width: 100%;        /* línea completa */
+    height: 4px;        /* más gruesa para visibilidad */
+    background-color: white; /* color visible sobre navbar */
+    border-radius: 2px; /* opcional, bordes redondeados */
+    transition: all 0.3s ease;
+  }
+}
