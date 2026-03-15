@@ -581,27 +581,27 @@ html, body {
 }
 
 /* ==========================
-   MOBILE BURGER MENU FIX
+   MOBILE BURGER MENU CORRECTO
 ========================== */
 @media (max-width: 768px) {
   .burger {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-around;
-    width: 40px;       /* tamaño más visible */
-    height: 35px;      /* alto del contenedor */
-    background: none;  /* sin fondo */
-    border: none;      /* sin contorno */
+    width: 45px;       /* ancho del burger */
+    height: 40px;      /* alto del contenedor */
+    background: none !important;  
+    border: none !important;
     cursor: pointer;
     padding: 0;
   }
 
   .burger span {
     display: block;
-    width: 100%;        /* línea completa */
-    height: 4px;        /* más gruesa para visibilidad */
-    background-color: white; /* color visible sobre navbar */
-    border-radius: 2px; /* opcional, bordes redondeados */
+    width: 100%;       /* línea completa */
+    height: 5px;       /* más gruesa */
+    background-color: white !important; /* visible sobre azul */
+    border-radius: 2px; 
     transition: all 0.3s ease;
   }
 }
