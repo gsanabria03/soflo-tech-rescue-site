@@ -569,3 +569,13 @@ html, body {
   align-items:center;
   justify-content:space-between;
 }
+
+
+.logo img{
+  height:45px;
+  transition:transform .25s ease;
+}
+
+.logo img:hover{
+  transform:scale(1.05);
+}
