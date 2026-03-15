@@ -555,6 +555,5 @@ html, body {
 .burger span{
   width:25px;
   height:3px;
-  border-radius:2px;
   display:block;
 }
