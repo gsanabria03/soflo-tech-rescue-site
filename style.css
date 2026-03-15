@@ -579,25 +579,3 @@ html, body {
 .logo img:hover{
   transform:scale(1.05);
 }
-
-
-/* Burger menu */
-.burger {
-  width: 40px;      /* aumenta el tamaño del contenedor */
-  height: 40px;
-  background: none; /* quita el fondo */
-  border: none;     /* quita el contorno */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  cursor: pointer;
-  padding: 5px;     /* opcional para dar espacio interno */
-}
-
-.burger span {
-  display: block;
-  height: 4px;      /* aumenta el grosor de las líneas */
-  width: 100%;      /* hace que las líneas ocupen todo el ancho */
-  background-color: #fff; /* líneas blancas para que se vean en fondo oscuro */
-  border-radius: 2px;     /* opcional, para que se vean más estéticas */
-}
