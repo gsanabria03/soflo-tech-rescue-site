@@ -523,6 +523,7 @@ html, body {
 
   .burger{
     display:block;
+     background: none;
   }
 
   .nav-links{
