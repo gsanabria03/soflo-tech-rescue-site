@@ -120,6 +120,47 @@
 </footer>
 
 <script src="animations.js" defer></script>
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("IcXcDJEIH8aHaZ5Bw");
+})();
+
+document.getElementById("contact-form")
+.addEventListener("submit", function(event){
+
+event.preventDefault();
+
+const form = this;
+
+const data = {
+name: form.name.value,
+email: form.email.value,
+phone: form.phone.value,
+"customer-issue": form["customer-issue"].value
+};
+
+emailjs.send("service_bknrumh","template_z1x3cvn",data)
+.then(function(){
+
+return emailjs.send("service_bknrumh","template_sdpdu4s",data);
+
+})
+.then(function(){
+
+alert("Request sent successfully!");
+form.reset();
+
+})
+.catch(function(error){
+
+console.error("EmailJS Error:", error);
+alert("Something went wrong. Please try again.");
+
+});
+
+});
+</script>
 </body>
 </html>
