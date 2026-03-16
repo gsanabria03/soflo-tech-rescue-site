@@ -152,7 +152,7 @@ return emailjs.send("service_bknrumh","template_sdpdu4s",data);
 })
 .then(function(){
 
-alert("Request sent successfully!");
+document.getElementById("success-msg").style.display = "block";
 form.reset();
 
 })
